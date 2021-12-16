@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link as RouterLink } from 'react-router-dom';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   '@global': {
     ul: {
       margin: 0,
@@ -31,10 +31,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6),
   },
   cardHeader: {
-    backgroundColor:
-      theme.palette.type === 'light'
-        ? theme.palette.grey[200]
-        : theme.palette.grey[700],
+    backgroundColor: theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[700],
   },
   cardPricing: {
     display: 'flex',
@@ -65,21 +62,10 @@ export default function Header({ signedIn, onSignOut }) {
 
   return (
     <React.Fragment>
-      <AppBar
-        position="static"
-        color="default"
-        elevation={0}
-        className={classes.appBar}
-      >
+      <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
-          <Typography
-            variant="h6"
-            color="inherit"
-            noWrap
-            component={RouterLink}
-            to="/"
-          >
-            App
+          <Typography variant="h6" color="inherit" noWrap component={RouterLink} to="/">
+            App MFE
           </Typography>
           <Button
             color="primary"
