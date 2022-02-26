@@ -25,7 +25,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   '@global': {
     a: {
       textDecoration: 'none',
@@ -62,11 +62,7 @@ export default function SignIn({ onSignIn }) {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className={classes.form}
-          noValidate
-        >
+        <form onSubmit={e => e.preventDefault()} className={classes.form} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -89,10 +85,7 @@ export default function SignIn({ onSignIn }) {
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
+          <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
           <Button
             type="submit"
             fullWidth
